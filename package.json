@@ -1,0 +1,13 @@
+{
+  "name": "fetch-knowledge-list-amonth",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./index.js"
+  },
+  "dependencies": {
+    "chromeless": "^1.5.2",
+    "dotenv": "^8.1.0"
+  }
+}
