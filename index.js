@@ -67,7 +67,7 @@ const contributionsGraphGenerator = (list, month) => {
     const mmdd = `${month}/${("0" + (index + 1)).slice(-2)}`;
     return list.find(l => l.postDate === mmdd) ? "■" : "□";
   });
-  const emptyPoints = Array(beginDay).fill("  ");
+  const emptyPoints = Array(beginDay).fill(" ");
   const flatFullContributionsPoints = emptyPoints.concat(contributionsPoint);
 
   const daysInWeek = 7;
@@ -84,20 +84,20 @@ const contributionsGraphGenerator = (list, month) => {
 
   const transposeMatrix = a => a[0].map((_, c) => a.map(r => r[c]).join(" "));
   const t = transposeMatrix(matrixFullContributions).map((val, index) => {
-    const empty = "            ";
+    const empty = "    ";
     switch (index) {
       case 0:
         return empty + val;
       case 1:
-        return "月曜  " + val;
+        return "Mon " + val;
       case 2:
         return empty + val;
       case 3:
-        return "水曜  " + val;
+        return "Wed " + val;
       case 4:
         return empty + val;
       case 5:
-        return "金曜  " + val;
+        return "Fri " + val;
       case 6:
         return empty + val;
       default:
@@ -105,8 +105,8 @@ const contributionsGraphGenerator = (list, month) => {
     }
   });
 
-  const graph = `contributions in the last month
-${t.join("\n")}`;
+  const graph = `contributions in the last month\n\`\`\`
+${t.join("\n")}\n\`\`\``;
   console.log(graph);
   return graph;
 };
