@@ -11,6 +11,7 @@ DOMAIN="xxxx.co.jp"
 e.x.)  
 ${month}月のレポート  
 ${contributes}  
+${graph}  
 以上
 1. `npm start`
 
@@ -19,4 +20,5 @@ ${contributes}
 |:--|:--|
 |${month}|前月|
 |${contributes}|投稿内容（title, 寄稿者, URL）|
+|${graph}|日毎投稿有無のグラフ|
 
