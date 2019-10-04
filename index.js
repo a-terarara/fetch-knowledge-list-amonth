@@ -72,7 +72,7 @@ const contributionsGraphGenerator = (list, month) => {
 
   const daysInWeek = 7;
   const matrixFullContributions = Array(
-    flatFullContributionsPoints.length / daysInWeek
+    parseInt(flatFullContributionsPoints.length / daysInWeek) + 1
   )
     .fill()
     .map((val, index) =>
