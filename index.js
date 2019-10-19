@@ -121,6 +121,6 @@ scraping()
       .replace("${contributes}", contributes(r, beforeMonth))
       .replace("${graph}", contributionsGraphGenerator(r, beforeMonth));
 
-    fs.writeFile("./report.txt", report);
+    fs.writeFile("./report.txt", report, () => {});
   })
   .catch(console.error.bind(console));
